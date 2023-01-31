@@ -3,6 +3,7 @@ import sys
 
 sys.setrecursionlimit(5000)
 
+#TEPクラス
 class TEP():
     def __init__(self):
         """ ノードのつながりを辞書型で表現する """
