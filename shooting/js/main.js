@@ -63,7 +63,7 @@ let explos = [];
 
 //自機画像
 let spritImag = new Image();
-spritImag.src = "sprite-2.png";
+spritImag.src = "sprite.png";
 
 //ゲーム初期化
 function gameInit(){
