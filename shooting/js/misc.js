@@ -45,9 +45,12 @@ class CharaBase{
         this.vecx = vecx;
         this.vecy = vecy;
         this.kill = false;
+        this.count = 0;
     }
 
     update(){
+        this.count++;
+
         this.x += this.vecx;
         this.y += this.vecy;
 
@@ -57,6 +60,22 @@ class CharaBase{
 
     draw(){
          drawSprite( this.snum, this.x, this.y )
+    }
+}
+
+//爆発のクラス
+class Explos extends CharaBase{
+    constructor( snum, x, y, vecx, vecy ){
+        super( snum, x, y, vecx, vecy );
+    }
+
+    draw(){
+        this.snum = 16 +(this.count>>2);
+        if(this.snum == 27){
+            this.kill = true;
+            return;
+        }
+        super.draw();
     }
 }
 

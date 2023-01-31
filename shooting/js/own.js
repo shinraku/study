@@ -82,6 +82,9 @@ class Bullet extends CharaBase{
                 )){
                     enemy[i].kill = true;
                     this.kill = true;
+                    
+                    explos.push(new Explos( 20, enemy[i].x, enemy[i].y, enemy[i].vecx>>3, enemy[i].vecy>>3 ));
+
                     break;
                 }
             }

@@ -59,6 +59,7 @@ let own = new Own();
 let enemy = [];
 let bullet = [];
 let enebul = [];
+let explos = [];
 
 //自機画像
 let spritImag = new Image();
@@ -92,6 +93,7 @@ function updateAll(){
     updateObj(enebul);
     updateObj(enemy);
     own.update();
+    updateObj(explos);
 }
 
 //描画の処理
@@ -104,6 +106,7 @@ function drawAll(){
     own.draw();
     drawObj(enebul)
     drawObj(enemy);
+    drawObj(explos);
 
     //自機の範囲(0 ~ FIELD_W)
     //カメラの範囲(0 ~ FIELD_W - SCREEN_W)
