@@ -24,6 +24,6 @@
 `makeMaximal(Graph.adjacency_dict)`<br>
 `findChildren(Graph.adjacency_dict, [])`
 
-と入力することで列挙が開始される
+と入力することで列挙が開始される。
 
 ※ findChildren関数の返り値がadjacency_dictからなるリスト
